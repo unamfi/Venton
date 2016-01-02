@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'A97A0E1CE10F8CFB6017CBD8'
-               BlueprintName = 'Pods-Hackathon'
+               BlueprintIdentifier = 'B5131A5A3261718632EA1086'
+               BlueprintName = 'Alamofire'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_Hackathon.framework'>
+               BuildableName = 'Alamofire.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
