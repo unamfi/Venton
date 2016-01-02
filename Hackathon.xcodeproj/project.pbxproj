@@ -14,6 +14,7 @@
 		4356E6B41C3737C4005E6889 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4356E6B21C3737C4005E6889 /* LaunchScreen.storyboard */; };
 		4356E6BF1C3737C5005E6889 /* HackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4356E6BE1C3737C5005E6889 /* HackathonTests.swift */; };
 		4356E6CA1C3737C5005E6889 /* HackathonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4356E6C91C3737C5005E6889 /* HackathonUITests.swift */; };
+		9F22D85A1C384C59000F0A2F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9F22D8591C384C59000F0A2F /* Settings.bundle */; };
 		437C5E291C38404B00481C03 /* APICategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E1C1C38404B00481C03 /* APICategory.m */; };
 		437C5E2A1C38404B00481C03 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E1E1C38404B00481C03 /* APIManager.m */; };
 		437C5E2B1C38404B00481C03 /* APISpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E201C38404B00481C03 /* APISpec.m */; };
@@ -76,6 +77,7 @@
 		437C5E361C388EF600481C03 /* Ericsson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ericsson.swift; sourceTree = "<group>"; };
 		5802FF0C100A4ACB79BE410D /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		5CD9B413845E46D216CB9D6A /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
+		9F22D8591C384C59000F0A2F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B1EB21D38C015B81BDDC7DD8 /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -153,6 +155,7 @@
 				4356E6AD1C3737C4005E6889 /* Main.storyboard */,
 				4356E6B01C3737C4005E6889 /* Assets.xcassets */,
 				4356E6B21C3737C4005E6889 /* LaunchScreen.storyboard */,
+				9F22D8591C384C59000F0A2F /* Settings.bundle */,
 				4356E6B51C3737C4005E6889 /* Info.plist */,
 				437C5DF81C3837B300481C03 /* Hackathon-Bridging-Header.h */,
 			);
@@ -323,7 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				437C5E331C38564700481C03 /* Settings.bundle in Resources */,
+				9F22D85A1C384C59000F0A2F /* Settings.bundle in Resources */,
 				4356E6B41C3737C4005E6889 /* LaunchScreen.storyboard in Resources */,
 				4356E6B11C3737C4005E6889 /* Assets.xcassets in Resources */,
 				4356E6AF1C3737C4005E6889 /* Main.storyboard in Resources */,
