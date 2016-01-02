@@ -35,14 +35,15 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *asdpResult)
         {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(asdpResult);
+                });
+            }
+        }];
     });
 }
 // ## END 2.6.1-sign-up
@@ -67,14 +68,14 @@
             @"otp" : oneTimePassword
         };
 
-        ASDPResult *result = [self processRequest:request params:requestParams];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:requestParams completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.6.2-validate-otp
@@ -100,14 +101,14 @@
                 @"pin" : @(pin)
         };
 
-        ASDPResult *result = [self processRequest:request params:requestParams];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:requestParams completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.6.3-set-pin
@@ -139,21 +140,21 @@
                                           @"Accept" : @"application/json"
                                           }];
         
-        ASDPResult *result = [self processRequest:request params:nil];
-
-        if (result.isSuccess)
-        {
-            _vin = vin;
-            _authToken = authorization;
-            _apiKey = pin;
-        }
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:nil completionHandler:^(ASDPResult *result) {
+            if (result.isSuccess)
+            {
+                _vin = vin;
+                _authToken = authorization;
+                _apiKey = pin;
+            }
+            
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.6.4-login
@@ -169,14 +170,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.6.5-door-unlock
@@ -192,14 +193,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.6.6-door-lock
@@ -215,14 +216,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.6.7-engine-on
@@ -238,14 +239,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.6.8-engine-off
@@ -261,14 +262,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.6.9-honk-and-blink
@@ -285,14 +286,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"GET"];
 
-        ASDPResult *result = [self processRequest:request params:nil];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:nil completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.6.10-check-request-status
@@ -308,14 +309,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.6.11-view-diagnostic-data
@@ -331,14 +332,16 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
 
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+     
     });
 }
 // ## END 2.6.12-get-vehicle-status
@@ -355,14 +358,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.6.13-get-bus-info
@@ -494,14 +497,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.12.1-consume
@@ -517,14 +520,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.12.9-get-products
@@ -540,14 +543,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.12.11-get-user-purchases
@@ -563,14 +566,15 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
 
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        }];
     });
 }
 // ## END 2.12.15-purchase
@@ -586,14 +590,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.12.18-refund
@@ -607,14 +611,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.13.1-add-a-subscriber
@@ -628,14 +632,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.13.2-add-a-subscriber-and-vehicle
@@ -651,14 +655,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.13.3-update-a-subscriber
@@ -674,14 +678,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"DELETE"];
 
-        ASDPResult *result = [self processRequest:request params:nil];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:nil completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.13.4-delete-a-subscriber
@@ -697,14 +701,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"GET"];
 
-        ASDPResult *result = [self processRequest:request params:nil];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:nil completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.13.5-view-a-subscriber
@@ -723,14 +727,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.13.6-search-subscribers
@@ -745,14 +749,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.14.1-add-a-passenger
@@ -768,14 +772,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.14.2-update-a-passenger
@@ -791,14 +795,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"DELETE"];
 
-        ASDPResult *result = [self processRequest:request params:nil];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:nil completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.14.3-delete-a-passenger
@@ -814,14 +818,16 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"GET"];
 
-        ASDPResult *result = [self processRequest:request params:nil];
+        [self processRequest:request params:nil completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
 
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+       
     });
 }
 // ## END 2.14.4-view-a-passenger
@@ -841,14 +847,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.14.5-search-passengers
@@ -862,14 +868,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.16.1-add-a-vehicle
@@ -885,14 +891,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.16.2-update-a-vehicle
@@ -908,14 +914,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"DELETE"];
 
-        ASDPResult *result = [self processRequest:request params:nil];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:nil completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.16.3-delete-a-vehicle
@@ -931,14 +937,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"GET"];
 
-        ASDPResult *result = [self processRequest:request params:nil];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:nil completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.16.4-view-a-vehicle
@@ -952,14 +958,16 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"UPDATE"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
 
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+       
     });
 }
 // ## END 2.16.5-update-vehicle-users
@@ -973,14 +981,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"DELETE"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];
     });
 }
 // ## END 2.16.6-delete-vehicle-users
@@ -999,14 +1007,14 @@
         NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:requestURL];
         [request setHTTPMethod:@"POST"];
 
-        ASDPResult *result = [self processRequest:request params:params[@"request"]];
-
-        if (completion)
-        {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                completion(result);
-            });
-        }
+        [self processRequest:request params:params[@"request"] completionHandler:^(ASDPResult *result) {
+            if (completion)
+            {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    completion(result);
+                });
+            }
+        }];        
     });
 }
 // ## END 2.16.7-search-vehicles
@@ -1030,7 +1038,7 @@
     return [NSURL URLWithString:targetURL];
 }
 
-- (ASDPResult *) processRequest:(NSMutableURLRequest *)request params:(NSDictionary *)params
+- (void) processRequest:(NSMutableURLRequest *)request params:(NSDictionary *)params completionHandler:(void (^)(ASDPResult *))completionHandler
 {
     if (![@"GET" isEqualToString:request.HTTPMethod])
     {
@@ -1058,27 +1066,42 @@
     NSString *contentLength = [NSString stringWithFormat:@"%d", (int) request.HTTPBody.length];
     [request setValue:contentLength forHTTPHeaderField:@"Content-Length"];
 
-    ASDPResult *result;
+    NSURLSession *session = [NSURLSession sharedSession];
+    NSURLSessionDataTask *task = [session dataTaskWithURL:request.URL
+                                        completionHandler:^(NSData *responseData,
+                                                            NSURLResponse *response,
+                                                            NSError *error) {
+                                            
+                                            
+                                            ASDPResult *result;
+                                            
+                                            NSHTTPURLResponse *httpURLResponse;
+                                            
+                                            if (response)
+                                            {
+                                                httpURLResponse = (NSHTTPURLResponse*)response;
+                                            }
+                                            
+                                            if (error || !response || !responseData)
+                                            {
+                                                if (response)
+                                                    result = [[ASDPResult alloc] initWithStatusCode:(int) httpURLResponse.statusCode];
+                                                else
+                                                    result = [[ASDPResult alloc] initWithStatusCode:500];
+                                            } else
+                                            {
+                                                result = [[ASDPResult alloc] initWithStatusCode:(int) httpURLResponse.statusCode body:responseData];
+                                            }
+                                            
+                                            result.request = request;
+                                            result.response = httpURLResponse;
+                                            
+                                            completionHandler(result);
+                                            
+                                            
+                                        }];
+    [task resume];
 
-    NSHTTPURLResponse *response;
-    NSError *error;
-    NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-
-    if (error || !response || !responseData)
-    {
-        if (response)
-            result = [[ASDPResult alloc] initWithStatusCode:(int) response.statusCode];
-        else
-            result = [[ASDPResult alloc] initWithStatusCode:500];
-    } else
-    {
-        result = [[ASDPResult alloc] initWithStatusCode:(int) response.statusCode body:responseData];
-    }
-
-    result.request = request;
-    result.response = response;
-
-    return result;
 }
 // ## END COMMON
 
