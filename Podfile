@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'Hackathon' do
 pod 'Mapbox-iOS-SDK'
+pod 'Alamofire', '~> 3.0'
 end
 
 target 'HackathonTests' do

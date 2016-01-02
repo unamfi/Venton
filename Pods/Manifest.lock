@@ -1,10 +1,13 @@
 PODS:
+  - Alamofire (3.1.4)
   - Mapbox-iOS-SDK (3.0.1)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.0)
   - Mapbox-iOS-SDK
 
 SPEC CHECKSUMS:
+  Alamofire: fbc829692f351fa1d8a31dd75fd7f7f56fea31fb
   Mapbox-iOS-SDK: 61e79f3dd8432617bd1a66b2d7273ab5ce923ca9
 
 COCOAPODS: 0.39.0
