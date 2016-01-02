@@ -35,6 +35,6 @@ class EricssonTests: XCTestCase {
             }
         }
         
-        self.waitForExpectationsWithTimeout(100, handler: nil)
+        self.waitForExpectationsWithTimeout(1, handler: nil)
     }
 }
