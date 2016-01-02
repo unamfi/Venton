@@ -10,13 +10,4 @@ import Foundation
 import Alamofire
 
 class EricssonManager {
-    
-    let parameters = ["username" : "provider", "pin": "1234", "vin" : "3152177573"]
-    
-    func logIn() {
-        ASDPRequestManager.sharedManager().login(parameters) { (asdpResult) -> Void in
-        }
-    }
-    
-    
 }
