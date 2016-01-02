@@ -1066,40 +1066,37 @@
     NSString *contentLength = [NSString stringWithFormat:@"%d", (int) request.HTTPBody.length];
     [request setValue:contentLength forHTTPHeaderField:@"Content-Length"];
 
-    NSURLSession *session = [NSURLSession sharedSession];
-    NSURLSessionDataTask *task = [session dataTaskWithURL:request.URL
-                                        completionHandler:^(NSData *responseData,
-                                                            NSURLResponse *response,
-                                                            NSError *error) {
-                                            
-                                            
-                                            ASDPResult *result;
-                                            
-                                            NSHTTPURLResponse *httpURLResponse;
-                                            
-                                            if (response)
-                                            {
-                                                httpURLResponse = (NSHTTPURLResponse*)response;
-                                            }
-                                            
-                                            if (error || !response || !responseData)
-                                            {
-                                                if (response)
-                                                    result = [[ASDPResult alloc] initWithStatusCode:(int) httpURLResponse.statusCode];
-                                                else
-                                                    result = [[ASDPResult alloc] initWithStatusCode:500];
-                                            } else
-                                            {
-                                                result = [[ASDPResult alloc] initWithStatusCode:(int) httpURLResponse.statusCode body:responseData];
-                                            }
-                                            
-                                            result.request = request;
-                                            result.response = httpURLResponse;
-                                            
-                                            completionHandler(result);
-                                            
-                                            
-                                        }];
+    NSURLSession *session = [NSURLSession sharedSession];    
+    NSURLSessionDataTask *task = [session dataTaskWithRequest:request
+                                            completionHandler:^(NSData * _Nullable responseData, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        ASDPResult *result;
+        
+        NSHTTPURLResponse *httpURLResponse;
+        
+        if (response)
+        {
+            httpURLResponse = (NSHTTPURLResponse*)response;
+        }
+        
+        if (error || !response || !responseData)
+        {
+            if (response)
+                result = [[ASDPResult alloc] initWithStatusCode:(int) httpURLResponse.statusCode];
+            else
+                result = [[ASDPResult alloc] initWithStatusCode:500];
+        } else
+        {
+            result = [[ASDPResult alloc] initWithStatusCode:(int) httpURLResponse.statusCode body:responseData];
+        }
+        
+        result.request = request;
+        result.response = httpURLResponse;
+        
+        completionHandler(result);
+        
+    }];
+    
     [task resume];
 
 }
