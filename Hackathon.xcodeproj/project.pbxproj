@@ -15,6 +15,12 @@
 		4356E6BF1C3737C5005E6889 /* HackathonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4356E6BE1C3737C5005E6889 /* HackathonTests.swift */; };
 		4356E6CA1C3737C5005E6889 /* HackathonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4356E6C91C3737C5005E6889 /* HackathonUITests.swift */; };
 		437C5E001C383CA500481C03 /* Ericsson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C5DFF1C383CA500481C03 /* Ericsson.swift */; };
+		437C5E291C38404B00481C03 /* APICategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E1C1C38404B00481C03 /* APICategory.m */; };
+		437C5E2A1C38404B00481C03 /* APIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E1E1C38404B00481C03 /* APIManager.m */; };
+		437C5E2B1C38404B00481C03 /* APISpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E201C38404B00481C03 /* APISpec.m */; };
+		437C5E2C1C38404B00481C03 /* APISpecRaw.m in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E221C38404B00481C03 /* APISpecRaw.m */; };
+		437C5E2D1C38404B00481C03 /* ASDPRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E261C38404B00481C03 /* ASDPRequestManager.m */; };
+		437C5E2E1C38404B00481C03 /* ASDPResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E281C38404B00481C03 /* ASDPResult.m */; };
 		AA09B5E324F635C574D0D112 /* Pods_Hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EB21D38C015B81BDDC7DD8 /* Pods_Hackathon.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +57,19 @@
 		4356E6CB1C3737C5005E6889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		437C5DF81C3837B300481C03 /* Hackathon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hackathon-Bridging-Header.h"; sourceTree = "<group>"; };
 		437C5DFF1C383CA500481C03 /* Ericsson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ericsson.swift; sourceTree = "<group>"; };
+		437C5E1B1C38404B00481C03 /* APICategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APICategory.h; sourceTree = "<group>"; };
+		437C5E1C1C38404B00481C03 /* APICategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APICategory.m; sourceTree = "<group>"; };
+		437C5E1D1C38404B00481C03 /* APIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
+		437C5E1E1C38404B00481C03 /* APIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIManager.m; sourceTree = "<group>"; };
+		437C5E1F1C38404B00481C03 /* APISpec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APISpec.h; sourceTree = "<group>"; };
+		437C5E201C38404B00481C03 /* APISpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APISpec.m; sourceTree = "<group>"; };
+		437C5E211C38404B00481C03 /* APISpecRaw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APISpecRaw.h; sourceTree = "<group>"; };
+		437C5E221C38404B00481C03 /* APISpecRaw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APISpecRaw.m; sourceTree = "<group>"; };
+		437C5E231C38404B00481C03 /* JSONObjectCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONObjectCoding.h; sourceTree = "<group>"; };
+		437C5E251C38404B00481C03 /* ASDPRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASDPRequestManager.h; sourceTree = "<group>"; };
+		437C5E261C38404B00481C03 /* ASDPRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASDPRequestManager.m; sourceTree = "<group>"; };
+		437C5E271C38404B00481C03 /* ASDPResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASDPResult.h; sourceTree = "<group>"; };
+		437C5E281C38404B00481C03 /* ASDPResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASDPResult.m; sourceTree = "<group>"; };
 		5802FF0C100A4ACB79BE410D /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		5CD9B413845E46D216CB9D6A /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		B1EB21D38C015B81BDDC7DD8 /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +146,7 @@
 				4356E6A91C3737C4005E6889 /* AppDelegate.swift */,
 				4356E6AB1C3737C4005E6889 /* ViewController.swift */,
 				437C5DFF1C383CA500481C03 /* Ericsson.swift */,
+				437C5E191C38404B00481C03 /* Ericsson */,
 				4356E6AD1C3737C4005E6889 /* Main.storyboard */,
 				4356E6B01C3737C4005E6889 /* Assets.xcassets */,
 				4356E6B21C3737C4005E6889 /* LaunchScreen.storyboard */,
@@ -152,6 +172,42 @@
 				4356E6CB1C3737C5005E6889 /* Info.plist */,
 			);
 			path = HackathonUITests;
+			sourceTree = "<group>";
+		};
+		437C5E191C38404B00481C03 /* Ericsson */ = {
+			isa = PBXGroup;
+			children = (
+				437C5E1A1C38404B00481C03 /* API */,
+				437C5E241C38404B00481C03 /* Network */,
+			);
+			path = Ericsson;
+			sourceTree = "<group>";
+		};
+		437C5E1A1C38404B00481C03 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				437C5E1B1C38404B00481C03 /* APICategory.h */,
+				437C5E1C1C38404B00481C03 /* APICategory.m */,
+				437C5E1D1C38404B00481C03 /* APIManager.h */,
+				437C5E1E1C38404B00481C03 /* APIManager.m */,
+				437C5E1F1C38404B00481C03 /* APISpec.h */,
+				437C5E201C38404B00481C03 /* APISpec.m */,
+				437C5E211C38404B00481C03 /* APISpecRaw.h */,
+				437C5E221C38404B00481C03 /* APISpecRaw.m */,
+				437C5E231C38404B00481C03 /* JSONObjectCoding.h */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		437C5E241C38404B00481C03 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				437C5E251C38404B00481C03 /* ASDPRequestManager.h */,
+				437C5E261C38404B00481C03 /* ASDPRequestManager.m */,
+				437C5E271C38404B00481C03 /* ASDPResult.h */,
+				437C5E281C38404B00481C03 /* ASDPResult.m */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,7 +393,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4356E6AC1C3737C4005E6889 /* ViewController.swift in Sources */,
+				437C5E291C38404B00481C03 /* APICategory.m in Sources */,
+				437C5E2E1C38404B00481C03 /* ASDPResult.m in Sources */,
+				437C5E2D1C38404B00481C03 /* ASDPRequestManager.m in Sources */,
+				437C5E2A1C38404B00481C03 /* APIManager.m in Sources */,
 				437C5E001C383CA500481C03 /* Ericsson.swift in Sources */,
+				437C5E2B1C38404B00481C03 /* APISpec.m in Sources */,
+				437C5E2C1C38404B00481C03 /* APISpecRaw.m in Sources */,
 				4356E6AA1C3737C4005E6889 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
