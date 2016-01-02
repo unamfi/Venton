@@ -1030,7 +1030,7 @@
     NSString *baseURL = [[NSUserDefaults standardUserDefaults] objectForKey:@"baseURL"];
 
     if (!baseURL)
-        baseURL = @"http://mafalda.hack.att.io:3000/";
+        baseURL = @"http://suzuka.hack.att.io:3000/";
 
     NSString *targetURL = [NSString stringWithString:baseURL];
     targetURL = [targetURL stringByAppendingPathComponent:targetPath];

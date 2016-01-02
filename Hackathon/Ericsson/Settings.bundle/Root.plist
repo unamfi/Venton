@@ -10,7 +10,7 @@
 			<key>AutocorrectionType</key>
 			<string>No</string>
 			<key>DefaultValue</key>
-			<string>http://mafalda.hack.att.io:3000/</string>
+			<string>http://suzuka.hack.att.io:3000/</string>
 			<key>IsSecure</key>
 			<false/>
 			<key>Key</key>
@@ -38,7 +38,7 @@
 			<key>Key</key>
 			<string>vinNumber</string>
 			<key>DefaultValue</key>
-			<string>3152177573</string>
+			<string>9429070993</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>
