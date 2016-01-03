@@ -1,25 +1,27 @@
 //
-//  ViewController.swift
+//  CurrentTripViewController.swift
 //  Hackathon
 //
-//  Created by Julio César Guzman on 1/1/16.
+//  Created by Jonathan Velazquez on 03/01/16.
 //  Copyright © 2016 Julio. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class CurrentTripViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
 
+   
 
 }
-

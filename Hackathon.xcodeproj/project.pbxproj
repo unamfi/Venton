@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		430B6DA21C393F9A000EB7FA /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 430B6DA11C393F9A000EB7FA /* Model.swift */; };
 		4356E6AA1C3737C4005E6889 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4356E6A91C3737C4005E6889 /* AppDelegate.swift */; };
-		4356E6AC1C3737C4005E6889 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4356E6AB1C3737C4005E6889 /* ViewController.swift */; };
+		4356E6AC1C3737C4005E6889 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4356E6AB1C3737C4005E6889 /* SettingsViewController.swift */; };
 		4356E6AF1C3737C4005E6889 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4356E6AD1C3737C4005E6889 /* Main.storyboard */; };
 		4356E6B11C3737C4005E6889 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4356E6B01C3737C4005E6889 /* Assets.xcassets */; };
 		4356E6B41C3737C4005E6889 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4356E6B21C3737C4005E6889 /* LaunchScreen.storyboard */; };
@@ -23,6 +23,10 @@
 		437C5E2E1C38404B00481C03 /* ASDPResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E281C38404B00481C03 /* ASDPResult.m */; };
 		437C5E351C38783E00481C03 /* EricssonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E341C38783E00481C03 /* EricssonTests.swift */; };
 		437C5E371C388EF600481C03 /* Ericsson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E361C388EF600481C03 /* Ericsson.swift */; };
+		9FE134A91C394E3000F3E39E /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE134A81C394E3000F3E39E /* SearchResultsViewController.swift */; };
+		9FE134AB1C394E3D00F3E39E /* CurrentTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE134AA1C394E3D00F3E39E /* CurrentTripViewController.swift */; };
+		9FE134AC1C3952E500F3E39E /* DIN1451-36breit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3C3381C3941AC002E2DF3 /* DIN1451-36breit.ttf */; };
+		9FE134AD1C3952E500F3E39E /* SF-UI-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3C3391C39463D002E2DF3 /* SF-UI-Text-Light.otf */; };
 		AA09B5E324F635C574D0D112 /* Pods_Hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EB21D38C015B81BDDC7DD8 /* Pods_Hackathon.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,7 +52,7 @@
 		430B6DA11C393F9A000EB7FA /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		4356E6A61C3737C4005E6889 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4356E6A91C3737C4005E6889 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4356E6AB1C3737C4005E6889 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4356E6AB1C3737C4005E6889 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		4356E6AE1C3737C4005E6889 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4356E6B01C3737C4005E6889 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4356E6B31C3737C4005E6889 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +84,8 @@
 		5CD9B413845E46D216CB9D6A /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		9FD3C3381C3941AC002E2DF3 /* DIN1451-36breit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN1451-36breit.ttf"; sourceTree = "<group>"; };
 		9FD3C3391C39463D002E2DF3 /* SF-UI-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Light.otf"; sourceTree = "<group>"; };
+		9FE134A81C394E3000F3E39E /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		9FE134AA1C394E3D00F3E39E /* CurrentTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentTripViewController.swift; sourceTree = "<group>"; };
 		B1EB21D38C015B81BDDC7DD8 /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -154,9 +160,11 @@
 				430B6D961C3912E4000EB7FA /* Playground.playground */,
 				4356E6A91C3737C4005E6889 /* AppDelegate.swift */,
 				430B6DA11C393F9A000EB7FA /* Model.swift */,
-				4356E6AB1C3737C4005E6889 /* ViewController.swift */,
+				4356E6AB1C3737C4005E6889 /* SettingsViewController.swift */,
 				437C5E191C38404B00481C03 /* Ericsson */,
 				4356E6AD1C3737C4005E6889 /* Main.storyboard */,
+				9FE134A81C394E3000F3E39E /* SearchResultsViewController.swift */,
+				9FE134AA1C394E3D00F3E39E /* CurrentTripViewController.swift */,
 				4356E6B01C3737C4005E6889 /* Assets.xcassets */,
 				4356E6B21C3737C4005E6889 /* LaunchScreen.storyboard */,
 				9FD3C3381C3941AC002E2DF3 /* DIN1451-36breit.ttf */,
@@ -331,6 +339,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FE134AC1C3952E500F3E39E /* DIN1451-36breit.ttf in Resources */,
+				9FE134AD1C3952E500F3E39E /* SF-UI-Text-Light.otf in Resources */,
 				4356E6B41C3737C4005E6889 /* LaunchScreen.storyboard in Resources */,
 				4356E6B11C3737C4005E6889 /* Assets.xcassets in Resources */,
 				4356E6AF1C3737C4005E6889 /* Main.storyboard in Resources */,
@@ -406,9 +416,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4356E6AC1C3737C4005E6889 /* ViewController.swift in Sources */,
+				4356E6AC1C3737C4005E6889 /* SettingsViewController.swift in Sources */,
+				9FE134A91C394E3000F3E39E /* SearchResultsViewController.swift in Sources */,
 				437C5E291C38404B00481C03 /* APICategory.m in Sources */,
 				437C5E2E1C38404B00481C03 /* ASDPResult.m in Sources */,
+				9FE134AB1C394E3D00F3E39E /* CurrentTripViewController.swift in Sources */,
 				437C5E2D1C38404B00481C03 /* ASDPRequestManager.m in Sources */,
 				437C5E2A1C38404B00481C03 /* APIManager.m in Sources */,
 				430B6DA21C393F9A000EB7FA /* Model.swift in Sources */,
