@@ -9,8 +9,6 @@
 import XCTest
 @testable import Hackathon
 
-let parameters = ["username" : "provider", "pin": "1234", "vin" : "9429070993"]
-
 class EricssonTests: XCTestCase {
     
     override func setUp() {
@@ -27,14 +25,15 @@ class EricssonTests: XCTestCase {
     func testLogin() {
      
         let expectation = self.expectationWithDescription("Login Succeded")
-
-        ASDPRequestManager.sharedManager().login(parameters) { (asdpResult) -> Void in
-            print(asdpResult.isSuccess)
-            if asdpResult.isSuccess {
+        let ericssonManager = EricssonManager()
+        
+        ericssonManager.logIn { (success) -> () in
+            if success {
                 expectation.fulfill()
             }
         }
-        
+    
         self.waitForExpectationsWithTimeout(1, handler: nil)
     }
+    
 }
