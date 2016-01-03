@@ -23,7 +23,6 @@ class EricssonTests: XCTestCase {
     
     
     func testLogin() {
-     
         let expectation = self.expectationWithDescription("Login Succeded")
         let ericssonManager = EricssonManager()
         
@@ -32,7 +31,6 @@ class EricssonTests: XCTestCase {
                 expectation.fulfill()
             }
         }
-    
         self.waitForExpectationsWithTimeout(1, handler: nil)
     }
     
