@@ -19,7 +19,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         // Override point for customization after application launch.
-
+        
+<<<<<<< HEAD
+        
+=======
+>>>>>>> feature/johnny-table
         return true
     }
 
