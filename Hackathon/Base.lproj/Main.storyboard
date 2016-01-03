@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4vJ-aa-5ni">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -46,6 +46,18 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLJ-Ym-ks6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnU-hp-Vnx">
+                                        <rect key="frame" x="8" y="594" width="359" height="54"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="Request a ride" backgroundImage="Blue bubble">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="4vJ-aa-5ni" kind="show" id="DYW-qU-hTu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlz-uM-3CS">
@@ -59,6 +71,9 @@
                                             <constraint firstAttribute="height" constant="40" id="l8R-h0-C39"/>
                                         </constraints>
                                         <state key="normal" image="julio"/>
+                                        <connections>
+                                            <segue destination="Cae-NB-Nyz" kind="show" id="f0b-Z4-DEz"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VENTON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3kY-fO-Fzx">
                                         <rect key="frame" x="126" y="37" width="123" height="25"/>
@@ -77,22 +92,22 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yq2-7F-NDc">
-                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="667" width="375" height="0.0"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YIq-A7-35S">
-                                        <rect key="frame" x="20" y="0.0" width="335" height="100"/>
+                                        <rect key="frame" x="20" y="0.0" width="335" height="0.0"/>
                                         <subviews>
                                             <pickerView multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="wWu-fY-b07">
-                                                <rect key="frame" x="0.0" y="0.0" width="77" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="77" height="0.0"/>
                                             </pickerView>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rr-E1-xUn">
-                                                <rect key="frame" x="87" y="0.0" width="76" height="100"/>
+                                                <rect key="frame" x="87" y="0.0" width="76" height="0.0"/>
                                             </pickerView>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVj-5o-V6k">
-                                                <rect key="frame" x="173" y="0.0" width="77" height="100"/>
+                                                <rect key="frame" x="173" y="0.0" width="77" height="0.0"/>
                                             </pickerView>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhJ-TL-OkP">
-                                                <rect key="frame" x="259" y="0.0" width="76" height="100"/>
+                                                <rect key="frame" x="259" y="0.0" width="76" height="0.0"/>
                                             </pickerView>
                                         </subviews>
                                     </stackView>
@@ -100,7 +115,7 @@
                                 <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="YIq-A7-35S" firstAttribute="leading" secondItem="Yq2-7F-NDc" secondAttribute="leading" constant="20" id="HJ7-ug-rbr"/>
-                                    <constraint firstAttribute="height" constant="100" id="VNC-VI-3hZ"/>
+                                    <constraint firstAttribute="height" id="VNC-VI-3hZ"/>
                                     <constraint firstItem="YIq-A7-35S" firstAttribute="top" secondItem="Yq2-7F-NDc" secondAttribute="top" id="lws-Ej-pCK"/>
                                     <constraint firstAttribute="trailing" secondItem="YIq-A7-35S" secondAttribute="trailing" constant="20" id="uRb-90-R24"/>
                                     <constraint firstAttribute="bottom" secondItem="YIq-A7-35S" secondAttribute="bottom" id="udd-pm-4un"/>
@@ -147,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="464" y="317"/>
+            <point key="canvasLocation" x="463.5" y="316.5"/>
         </scene>
         <!--SearchRidesResultsViewController-->
         <scene sceneID="aqg-jU-6e0">
@@ -229,9 +244,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="94.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRA-Xg-7mu" customClass="CircleButton" customModule="Hackathon" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRA-Xg-7mu" customClass="CircleButton" customModule="Hackathon" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="8" width="80" height="80"/>
                                                     <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <connections>
+                                                        <segue destination="Ik4-Lp-dcZ" kind="show" id="c5y-eq-E8a"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17M-J3-nIe">
                                                     <rect key="frame" x="120" y="38" width="113" height="48.5"/>
