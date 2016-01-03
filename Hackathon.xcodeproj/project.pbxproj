@@ -43,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		430B6D961C3912E4000EB7FA /* Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Playground.playground; sourceTree = "<group>"; };
 		4356E6A61C3737C4005E6889 /* Hackathon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hackathon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4356E6A91C3737C4005E6889 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4356E6AB1C3737C4005E6889 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +147,7 @@
 		4356E6A81C3737C4005E6889 /* Hackathon */ = {
 			isa = PBXGroup;
 			children = (
+				430B6D961C3912E4000EB7FA /* Playground.playground */,
 				4356E6A91C3737C4005E6889 /* AppDelegate.swift */,
 				4356E6AB1C3737C4005E6889 /* ViewController.swift */,
 				437C5E191C38404B00481C03 /* Ericsson */,
