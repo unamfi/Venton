@@ -23,10 +23,17 @@
 		437C5E2E1C38404B00481C03 /* ASDPResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E281C38404B00481C03 /* ASDPResult.m */; };
 		437C5E351C38783E00481C03 /* EricssonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E341C38783E00481C03 /* EricssonTests.swift */; };
 		437C5E371C388EF600481C03 /* Ericsson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 437C5E361C388EF600481C03 /* Ericsson.swift */; };
+		438F74811C399C2000CBFC46 /* julio.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F74801C399C2000CBFC46 /* julio.png */; };
+		438F74861C399DBC00CBFC46 /* camioneta.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F74831C399DBC00CBFC46 /* camioneta.png */; };
+		438F74871C399DBC00CBFC46 /* coche.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F74841C399DBC00CBFC46 /* coche.png */; };
+		438F74881C399DBC00CBFC46 /* taxi.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F74851C399DBC00CBFC46 /* taxi.png */; };
+		438F748A1C399F4400CBFC46 /* jonathan.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F74891C399F4400CBFC46 /* jonathan.png */; };
+		438F748C1C399FDD00CBFC46 /* michelle.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F748B1C399FDD00CBFC46 /* michelle.png */; };
+		438F74921C39A28F00CBFC46 /* cesar.png in Resources */ = {isa = PBXBuildFile; fileRef = 438F74911C39A28F00CBFC46 /* cesar.png */; };
 		43D4CB4F1C39544C000AC42A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D4CB4E1C39544C000AC42A /* ProfileViewController.swift */; };
 		43D4CB521C395B2A000AC42A /* PT DIN Condensed Cyrillic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43D4CB511C395B2A000AC42A /* PT DIN Condensed Cyrillic.ttf */; };
 		43D4CB541C3968C8000AC42A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D4CB531C3968C8000AC42A /* CircleView.swift */; };
-		9FE134A91C394E3000F3E39E /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE134A81C394E3000F3E39E /* SearchResultsViewController.swift */; };
+		9FE134A91C394E3000F3E39E /* SearchRidesResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE134A81C394E3000F3E39E /* SearchRidesResultsViewController.swift */; };
 		9FE134AB1C394E3D00F3E39E /* CurrentTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE134AA1C394E3D00F3E39E /* CurrentTripViewController.swift */; };
 		9FE134AC1C3952E500F3E39E /* DIN1451-36breit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3C3381C3941AC002E2DF3 /* DIN1451-36breit.ttf */; };
 		9FE134AD1C3952E500F3E39E /* SF-UI-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3C3391C39463D002E2DF3 /* SF-UI-Text-Light.otf */; };
@@ -83,6 +90,13 @@
 		437C5E321C38564700481C03 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		437C5E341C38783E00481C03 /* EricssonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EricssonTests.swift; sourceTree = "<group>"; };
 		437C5E361C388EF600481C03 /* Ericsson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ericsson.swift; sourceTree = "<group>"; };
+		438F74801C399C2000CBFC46 /* julio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = julio.png; sourceTree = "<group>"; };
+		438F74831C399DBC00CBFC46 /* camioneta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camioneta.png; sourceTree = "<group>"; };
+		438F74841C399DBC00CBFC46 /* coche.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = coche.png; sourceTree = "<group>"; };
+		438F74851C399DBC00CBFC46 /* taxi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taxi.png; sourceTree = "<group>"; };
+		438F74891C399F4400CBFC46 /* jonathan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jonathan.png; sourceTree = "<group>"; };
+		438F748B1C399FDD00CBFC46 /* michelle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = michelle.png; sourceTree = "<group>"; };
+		438F74911C39A28F00CBFC46 /* cesar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cesar.png; sourceTree = "<group>"; };
 		43D4CB4E1C39544C000AC42A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		43D4CB511C395B2A000AC42A /* PT DIN Condensed Cyrillic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PT DIN Condensed Cyrillic.ttf"; sourceTree = "<group>"; };
 		43D4CB531C3968C8000AC42A /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
@@ -90,7 +104,7 @@
 		5CD9B413845E46D216CB9D6A /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
 		9FD3C3381C3941AC002E2DF3 /* DIN1451-36breit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN1451-36breit.ttf"; sourceTree = "<group>"; };
 		9FD3C3391C39463D002E2DF3 /* SF-UI-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Light.otf"; sourceTree = "<group>"; };
-		9FE134A81C394E3000F3E39E /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
+		9FE134A81C394E3000F3E39E /* SearchRidesResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchRidesResultsViewController.swift; sourceTree = "<group>"; };
 		9FE134AA1C394E3D00F3E39E /* CurrentTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentTripViewController.swift; sourceTree = "<group>"; };
 		B1EB21D38C015B81BDDC7DD8 /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -168,6 +182,8 @@
 				430B6DA11C393F9A000EB7FA /* Model.swift */,
 				437C5E191C38404B00481C03 /* Ericsson */,
 				4356E6AD1C3737C4005E6889 /* Main.storyboard */,
+				438F74941C39A3AD00CBFC46 /* People Images */,
+				438F74931C39A39D00CBFC46 /* Car Images */,
 				43D4CB531C3968C8000AC42A /* CircleView.swift */,
 				43D4CB501C395467000AC42A /* View Controllers */,
 				4356E6B01C3737C4005E6889 /* Assets.xcassets */,
@@ -238,11 +254,32 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		438F74931C39A39D00CBFC46 /* Car Images */ = {
+			isa = PBXGroup;
+			children = (
+				438F74831C399DBC00CBFC46 /* camioneta.png */,
+				438F74841C399DBC00CBFC46 /* coche.png */,
+				438F74851C399DBC00CBFC46 /* taxi.png */,
+			);
+			name = "Car Images";
+			sourceTree = "<group>";
+		};
+		438F74941C39A3AD00CBFC46 /* People Images */ = {
+			isa = PBXGroup;
+			children = (
+				438F74801C399C2000CBFC46 /* julio.png */,
+				438F74891C399F4400CBFC46 /* jonathan.png */,
+				438F748B1C399FDD00CBFC46 /* michelle.png */,
+				438F74911C39A28F00CBFC46 /* cesar.png */,
+			);
+			name = "People Images";
+			sourceTree = "<group>";
+		};
 		43D4CB501C395467000AC42A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				4356E6AB1C3737C4005E6889 /* SettingsViewController.swift */,
-				9FE134A81C394E3000F3E39E /* SearchResultsViewController.swift */,
+				9FE134A81C394E3000F3E39E /* SearchRidesResultsViewController.swift */,
 				43D4CB4E1C39544C000AC42A /* ProfileViewController.swift */,
 				9FE134AA1C394E3D00F3E39E /* CurrentTripViewController.swift */,
 			);
@@ -356,11 +393,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438F74871C399DBC00CBFC46 /* coche.png in Resources */,
+				438F74881C399DBC00CBFC46 /* taxi.png in Resources */,
+				438F748A1C399F4400CBFC46 /* jonathan.png in Resources */,
+				438F74921C39A28F00CBFC46 /* cesar.png in Resources */,
 				43D4CB521C395B2A000AC42A /* PT DIN Condensed Cyrillic.ttf in Resources */,
+				438F74861C399DBC00CBFC46 /* camioneta.png in Resources */,
 				9FE134AC1C3952E500F3E39E /* DIN1451-36breit.ttf in Resources */,
 				9FE134AD1C3952E500F3E39E /* SF-UI-Text-Light.otf in Resources */,
 				4356E6B41C3737C4005E6889 /* LaunchScreen.storyboard in Resources */,
+				438F74811C399C2000CBFC46 /* julio.png in Resources */,
 				4356E6B11C3737C4005E6889 /* Assets.xcassets in Resources */,
+				438F748C1C399FDD00CBFC46 /* michelle.png in Resources */,
 				4356E6AF1C3737C4005E6889 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,7 +479,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4356E6AC1C3737C4005E6889 /* SettingsViewController.swift in Sources */,
-				9FE134A91C394E3000F3E39E /* SearchResultsViewController.swift in Sources */,
+				9FE134A91C394E3000F3E39E /* SearchRidesResultsViewController.swift in Sources */,
 				437C5E291C38404B00481C03 /* APICategory.m in Sources */,
 				437C5E2E1C38404B00481C03 /* ASDPResult.m in Sources */,
 				9FE134AB1C394E3D00F3E39E /* CurrentTripViewController.swift in Sources */,

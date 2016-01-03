@@ -66,7 +66,7 @@ struct Vehicle {
 
 struct Account {
     var name : String
-    var photo : UIImage
+    var photo : UIImage?
     var description : String
     var givenRides : Int
     var recievedRides : Int
@@ -75,4 +75,17 @@ struct Account {
     var cars : [Vehicle]
     var following : [Account]
     var followers : [Account]
+    
+    init(name: String, photo : UIImage, description : String, givenRides : Int, recievedRides : Int, likes : Int, dislikes : Int, cars : [Vehicle], following : [Account], followers : [Account]) {
+        self.name = name
+        self.photo = photo
+        self.description = description
+        self.givenRides = givenRides
+        self.recievedRides = recievedRides
+        self.likes = likes
+        self.dislikes = dislikes
+        self.cars = cars
+        self.following = following
+        self.followers = followers
+    }
 }
