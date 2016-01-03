@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RefineSearchView" customModule="Hackathon" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RefineSearchItemView" customModule="Hackathon" customModuleProvider="target">
             <connections>
-                <outlet property="picker" destination="nbG-z2-Rb2" id="enP-jK-0ub"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="picker" destination="nbG-z2-Rb2" id="sUV-7w-Eh6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="UWr-fm-bMs"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

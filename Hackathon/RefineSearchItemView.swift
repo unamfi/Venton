@@ -28,6 +28,7 @@ class PickerDataSource: NSObject,UIPickerViewDataSource {
 class PickerDelegate: NSObject,UIPickerViewDelegate {
     
     var pickerData = [UIView]()
+    var selectedRow = 0
     
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView?) -> UIView {
         return pickerData[component]
@@ -36,12 +37,16 @@ class PickerDelegate: NSObject,UIPickerViewDelegate {
     func setData(pickerData: [UIView]){
         self.pickerData = pickerData
     }
+    
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedRow = row
+    }
 
 }
 
 
 
-class RefineSearchView: UIViewController {
+class RefineSearchItemView: UIViewController {
     
     
     @IBOutlet weak var picker: UIPickerView!
@@ -53,7 +58,7 @@ class RefineSearchView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupPicker()
+        
         
     }
 
@@ -63,18 +68,25 @@ class RefineSearchView: UIViewController {
     }
     
     func setupPicker(){
-        picker.delegate = pickerDelegate
-        picker.dataSource = pickerDataSource
+            picker.delegate = pickerDelegate
+            picker.dataSource = pickerDataSource
     }
     
     
     func setData(pickerData:[UIView]){
+        setupPicker()
+        
         self.pickerData = pickerData
         pickerDelegate.setData(pickerData)
         pickerDataSource.setData(pickerData.count)
         
         picker.reloadAllComponents()
         
+    }
+    
+    
+    func getSelection()-> Int{
+        return pickerDelegate.selectedRow
     }
 
 }

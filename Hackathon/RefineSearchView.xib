@@ -1,19 +1,56 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RefineSearchView" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RefineSearchView" customModule="Hackathon" customModuleProvider="target">
             <connections>
+                <outlet property="passengerAmountView" destination="JFJ-Hl-YNx" id="1Jg-Hr-LO2"/>
+                <outlet property="travelCostView" destination="ick-dr-9rD" id="AGc-lv-7zy"/>
+                <outlet property="travelModeView" destination="hCQ-Y8-lSh" id="fS1-25-1JZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="waitTimeView" destination="xBF-g9-8oq" id="MK7-JP-sYr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="557" height="87"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4cA-lr-zpl">
+                    <rect key="frame" x="0.0" y="0.0" width="557" height="87"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFJ-Hl-YNx">
+                            <rect key="frame" x="0.0" y="0.0" width="139.5" height="87"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBF-g9-8oq">
+                            <rect key="frame" x="139.5" y="0.0" width="139" height="87"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ick-dr-9rD">
+                            <rect key="frame" x="278.5" y="0.0" width="139.5" height="87"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hCQ-Y8-lSh">
+                            <rect key="frame" x="418" y="0.0" width="139" height="87"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="4cA-lr-zpl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="AL5-1h-DZN"/>
+                <constraint firstItem="4cA-lr-zpl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MXE-bL-pV6"/>
+                <constraint firstAttribute="trailing" secondItem="4cA-lr-zpl" secondAttribute="trailing" id="dKl-bi-t02"/>
+                <constraint firstAttribute="bottom" secondItem="4cA-lr-zpl" secondAttribute="bottom" id="m3k-5N-bfT"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="343.5" y="542.5"/>
         </view>
     </objects>
 </document>
