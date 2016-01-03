@@ -76,7 +76,7 @@ class ProfileViewController: UIViewController {
         
         login()
         configTable()
-        setupMap()
+        
         
     }
     
@@ -89,6 +89,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         getDiagnosticInfo()
+        setupMap()
     }
     
     func login(){
@@ -108,7 +109,7 @@ class ProfileViewController: UIViewController {
     func configTable(){
         dataSource = tableDataSource(tableView: stateTableView)
         stateTableView.dataSource = dataSource
-        //stateTableView.delegate = TableDelegate()
+        
     }
     
     
@@ -158,7 +159,9 @@ class ProfileViewController: UIViewController {
     
     
     func setupMap(){
-        let mapBoxView = MGLMapView(frame: self.mapaContainerView.frame ,styleURL: MGLStyle.darkStyleURL())
+        let mapBoxView = MGLMapView(frame:CGRect(x: 0, y: 0, width: 180, height: 320) ,styleURL: MGLStyle.darkStyleURL())
+        
+        
         mapBoxView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         mapBoxView.setCenterCoordinate(CLLocationCoordinate2D(latitude: 20.6530501,
             longitude: -103.3913392),
