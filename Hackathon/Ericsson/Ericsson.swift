@@ -48,14 +48,20 @@ import Alamofire
 
 typealias BooleanClosure = (Bool) -> ()
 typealias SuccessClosure = BooleanClosure
-typealias AnyObjectByStringDictionary = [String: AnyObject]
-typealias HandleRequestID = (Int) -> ()
-typealias InfoClosure = (AnyObjectByStringDictionary) -> ()
-typealias GetRequestIDClosure = (HandleRequestID) -> ()
+private typealias HandleRequestID = (Int) -> ()
+typealias InfoClosure = ([String: AnyObject]) -> ()
+private typealias GetRequestIDClosure = (HandleRequestID) -> ()
+
+
+private let UsernameKey = "username"
+private let PinKey = "pin"
+private let VinKey = "vin"
+private let RequestIdKey = "requestId"
+private let RouteKey = "route"
 
 class EricssonManager {
 
-    private let logInParameters = ["username" : "provider", "pin": "1234", "vin" : "3115361391"]
+    private let logInParameters = [UsernameKey : "provider", PinKey: "1234", VinKey : "3115361391"]
     
     func logIn(success: SuccessClosure) {
         sharedASDPManager.login(logInParameters) { (asdpResult) -> Void in
@@ -63,21 +69,21 @@ class EricssonManager {
         }
     }
 
-    private var parameters = ["route" : ["vin" : "3115361391"]]
+    private var parameters = [RouteKey : [VinKey : "3115361391"]]
     
     private var sharedASDPManager : ASDPRequestManager {
         return ASDPRequestManager.sharedManager()
     }
 
-    private func dictionaryWithData(data : NSData) -> AnyObjectByStringDictionary {
-        return try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! AnyObjectByStringDictionary
+    private func dictionaryWithData(data : NSData) -> [String: AnyObject] {
+        return try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! [String: AnyObject]
     }
     
     private func getRequestID(handler: HandleRequestID, asdpMethod : ([NSObject:AnyObject]!, ASDPRequestCompletionBlock!)->() ){
         asdpMethod(parameters) { (result) -> Void in
             let data = result.bodyData
             let infoDictionary = self.dictionaryWithData(data)
-            let requestID = infoDictionary["requestId"] as! Int
+            let requestID = infoDictionary[RequestIdKey] as! Int
             handler(requestID)
         }
     }
@@ -90,7 +96,7 @@ class EricssonManager {
     }
     
     private func addRequestIDToParameters(requestID : Int) {
-        self.parameters["route"]!["requestId"] = String(requestID)
+        self.parameters[RouteKey]![RequestIdKey] = String(requestID)
     }
     
     private func getStatus(info: InfoClosure, getRequestIDClosure : GetRequestIDClosure) {
