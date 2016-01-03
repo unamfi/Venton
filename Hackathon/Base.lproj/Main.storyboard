@@ -588,24 +588,33 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="63" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bof-hZ-Eh5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="73" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpS-LX-nya">
+                                <rect key="frame" x="226" y="310" width="93" height="40.5"/>
+                                <fontDescription key="fontDescription" name="DINCondensedC" family="DINCondensedC" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="111" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bof-hZ-Eh5">
                                 <rect key="frame" x="-1" y="288" width="201" height="379"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="98" id="Vcn-Ef-dfI" customClass="ProfileCell" customModule="Hackathon" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="201" height="98"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileCell" rowHeight="111" id="Vcn-Ef-dfI" customClass="ProfileCell" customModule="Hackathon" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="201" height="111"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vcn-Ef-dfI" id="NRJ-11-FgB">
-                                            <rect key="frame" x="0.0" y="0.0" width="201" height="97.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="201" height="110.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="271" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdQ-kb-yBQ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="271" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdQ-kb-yBQ">
                                                     <rect key="frame" x="8" y="8" width="185" height="58"/>
                                                     <fontDescription key="fontDescription" name="DINCondensedC" family="DINCondensedC" pointSize="48"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RIDES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKc-J5-lGa">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="RIDES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKc-J5-lGa">
                                                     <rect key="frame" x="8" y="62" width="185" height="21"/>
                                                     <fontDescription key="fontDescription" name="DIN1451fetteBreitschrift1936-Regular" family="DIN 1451 fette Breitschrift 1936" pointSize="12"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -619,7 +628,7 @@
                                                 <constraint firstItem="BKc-J5-lGa" firstAttribute="trailing" secondItem="SdQ-kb-yBQ" secondAttribute="trailing" id="UML-Nz-zoU"/>
                                                 <constraint firstItem="SdQ-kb-yBQ" firstAttribute="trailing" secondItem="NRJ-11-FgB" secondAttribute="trailingMargin" id="Xvi-PQ-wqa"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="SdQ-kb-yBQ" secondAttribute="bottom" constant="23.5" id="aKB-N0-HS3"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="BKc-J5-lGa" secondAttribute="bottom" constant="6.5" id="jsf-TD-BrM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BKc-J5-lGa" secondAttribute="bottom" constant="6" id="jsf-TD-BrM"/>
                                                 <constraint firstItem="SdQ-kb-yBQ" firstAttribute="leading" secondItem="BKc-J5-lGa" secondAttribute="leading" id="wgm-7z-lh3"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -630,20 +639,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="73" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpS-LX-nya">
-                                <rect key="frame" x="226" y="310" width="93" height="40.5"/>
-                                <fontDescription key="fontDescription" name="DINCondensedC" family="DINCondensedC" pointSize="48"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
-                                </userDefinedRuntimeAttributes>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="mapaContainerView" destination="QPa-n2-AAF" id="Tjk-fk-7Ws"/>
                         <outlet property="stateTableView" destination="Bof-hZ-Eh5" id="vTe-2F-QsK"/>
                     </connections>
                 </viewController>

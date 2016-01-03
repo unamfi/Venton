@@ -8,20 +8,19 @@
 
 import Foundation
 import UIKit
-
+import Mapbox
 
 
 class tableDataSource: NSObject,UITableViewDataSource {
     var descriptionTexts = [String]()
-    var valuesTexts = [String]()
+    var valueTexts = [String]()
     var valueColors = [UIColor]()
     var tableView:UITableView!
     
     
-    init(descriptionTexts:[String],valuesTexts:[String],valueColors:[UIColor],tableView:UITableView) {
-        self.descriptionTexts = descriptionTexts
-        self.valuesTexts = valuesTexts
-        self.valueColors = valueColors
+    
+    
+    init(tableView:UITableView) {
         self.tableView = tableView
     }
     
@@ -31,11 +30,26 @@ class tableDataSource: NSObject,UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("ProfileCell") as! ProfileCell
-        cell.setCell(descriptionTexts[indexPath.row], value: valuesTexts[indexPath.row], valueColor: valueColors[indexPath.row])
+        cell.setCell(descriptionTexts[indexPath.row], value: valueTexts[indexPath.row], valueColor: valueColors[indexPath.row])
         return cell
     }
+    
+    
+    func addData(description:String,value:String,valueColor:UIColor){
+        descriptionTexts.append(description)
+        valueColors.append(valueColor)
+        valueTexts.append(value)
+        tableView.reloadData()
+    }
+    
 }
 
+
+class TableDelegate: NSObject,UITableViewDelegate{
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 200
+    }
+}
 
 
 
@@ -51,12 +65,18 @@ class ProfileViewController: UIViewController {
     var valueState = [String]()
     var valueColor = [UIColor]()
     
+    var grenColor = UIColor(red: 126/155, green: 211/155, blue: 33/155, alpha: 1)
+    
+    var dataSource:tableDataSource?
+    
+    @IBOutlet weak var mapaContainerView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         login()
         configTable()
+        setupMap()
         
     }
     
@@ -86,7 +106,9 @@ class ProfileViewController: UIViewController {
     
     
     func configTable(){
-        stateTableView.dataSource = tableDataSource(descriptionTexts: descriptionState, valuesTexts: valueState, valueColors: valueColor, tableView: stateTableView)
+        dataSource = tableDataSource(tableView: stateTableView)
+        stateTableView.dataSource = dataSource
+        //stateTableView.delegate = TableDelegate()
     }
     
     
@@ -100,48 +122,50 @@ class ProfileViewController: UIViewController {
                     
                     switch key as! String {
                         case "abs":
-                            self.descriptionState.append("ABS")
-                            
                             if value as! String == "OK"{
-                                self.valueState.append("Looks Good")
-                                self.valueColor.append(UIColor.greenColor())
+                                self.dataSource?.addData("ABS", value: "Good", valueColor: self.grenColor)
+                            
                             }else{
-                                self.valueState.append("Danger")
-                                self.valueColor.append(UIColor.redColor())
+                                self.dataSource?.addData("ABS", value: "Danger", valueColor: UIColor.redColor())
                             }
                             break;
-                        case "airbags":
-                            self.descriptionState.append("AirBags")
+                        case "airBags":
+                            
                             if value as! String == "OK"{
-                                self.valueState.append("Looks Good")
-                                self.valueColor.append(UIColor.greenColor())
+                                self.dataSource?.addData("AirBags", value: "Good", valueColor: self.grenColor)
                             }else{
-                                self.valueState.append("Danger")
-                                self.valueColor.append(UIColor.redColor())
+                                self.dataSource?.addData("AirBags", value: "Danger", valueColor: UIColor.redColor())
                             }
                         break
                     case "transmission":
-                        self.descriptionState.append("Transmission")
                         if value as! String == "OK"{
-                            self.valueState.append("Looks Good")
-                            self.valueColor.append(UIColor.greenColor())
+                            self.dataSource?.addData("Transmission", value: "Good", valueColor: self.grenColor)
+
                         }else{
-                            self.valueState.append("Danger")
-                            self.valueColor.append(UIColor.redColor())
+                            self.dataSource?.addData("Transmission", value: "Danger", valueColor: UIColor.redColor())
                         }
                         break
                     default:
                         break
                     }
                 }
-                self.stateTableView.reloadData()
-
                 
             }
         
     }
     
     
+    
+    
+    func setupMap(){
+        let mapBoxView = MGLMapView(frame: self.mapaContainerView.frame ,styleURL: MGLStyle.darkStyleURL())
+        mapBoxView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        mapBoxView.setCenterCoordinate(CLLocationCoordinate2D(latitude: 20.6530501,
+            longitude: -103.3913392),
+            zoomLevel: 13, animated: false)
+        mapaContainerView.addSubview(mapBoxView)
+    }
+
     
     
 }
