@@ -48,23 +48,22 @@ import Alamofire
 
 typealias BooleanClosure = (Bool) -> ()
 typealias SuccessClosure = BooleanClosure
-
 typealias AnyObjectByStringDictionary = [String: AnyObject]
-
 typealias HandleRequestID = (Int) -> ()
-
 typealias InfoClosure = (AnyObjectByStringDictionary) -> ()
-
 typealias GetRequestIDClosure = (HandleRequestID) -> ()
 
 class EricssonManager {
 
     private let logInParameters = ["username" : "provider", "pin": "1234", "vin" : "3115361391"]
-    private var parameters = ["route" : ["vin" : "3115361391"]]
     
-    private func addRequestIDToParameters(requestID : Int) {
-        self.parameters["route"]!["requestId"] = String(requestID)
+    func logIn(success: SuccessClosure) {
+        sharedASDPManager.login(logInParameters) { (asdpResult) -> Void in
+            success(asdpResult.isSuccess)
+        }
     }
+
+    private var parameters = ["route" : ["vin" : "3115361391"]]
     
     private var sharedASDPManager : ASDPRequestManager {
         return ASDPRequestManager.sharedManager()
@@ -72,12 +71,6 @@ class EricssonManager {
 
     private func dictionaryWithData(data : NSData) -> AnyObjectByStringDictionary {
         return try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! AnyObjectByStringDictionary
-    }
-    
-    func logIn(success: SuccessClosure) {
-        sharedASDPManager.login(logInParameters) { (asdpResult) -> Void in
-            success(asdpResult.isSuccess)
-        }
     }
     
     private func getRequestID(handler: HandleRequestID, asdpMethod : ([NSObject:AnyObject]!, ASDPRequestCompletionBlock!)->() ){
@@ -94,6 +87,10 @@ class EricssonManager {
             let dataDictionary = self.dictionaryWithData(result.bodyData)
             info(dataDictionary)
         }
+    }
+    
+    private func addRequestIDToParameters(requestID : Int) {
+        self.parameters["route"]!["requestId"] = String(requestID)
     }
     
     private func getStatus(info: InfoClosure, getRequestIDClosure : GetRequestIDClosure) {
