@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4vJ-aa-5ni">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -10,6 +10,17 @@
             <string>DIN1451fetteBreitschrift1936-Regular</string>
             <string>DIN1451fetteBreitschrift1936-Regular</string>
             <string>DIN1451fetteBreitschrift1936-Regular</string>
+            <string>DIN1451fetteBreitschrift1936-Regular</string>
+            <string>DIN1451fetteBreitschrift1936-Regular</string>
+            <string>DIN1451fetteBreitschrift1936-Regular</string>
+            <string>DIN1451fetteBreitschrift1936-Regular</string>
+            <string>DIN1451fetteBreitschrift1936-Regular</string>
+            <string>DIN1451fetteBreitschrift1936-Regular</string>
+            <string>DIN1451fetteBreitschrift1936-Regular</string>
+        </mutableArray>
+        <mutableArray key="PT DIN Condensed Cyrillic.ttf">
+            <string>DINCondensedC</string>
+            <string>DINCondensedC</string>
         </mutableArray>
         <mutableArray key="SF-UI-Text-Light.otf">
             <string>SFUIText-Light</string>
@@ -51,7 +62,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="2O4-vB-tFO" firstAttribute="leading" secondItem="Mlz-uM-3CS" secondAttribute="leading" constant="20" id="9nb-XZ-NFz"/>
                                     <constraint firstItem="3kY-fO-Fzx" firstAttribute="centerX" secondItem="Mlz-uM-3CS" secondAttribute="centerX" id="OaO-wd-Io5"/>
@@ -67,13 +78,13 @@
                                         <rect key="frame" x="20" y="0.0" width="560" height="80"/>
                                         <subviews>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wWu-fY-b07">
-                                                <rect key="frame" x="0.0" y="0.0" width="118.5" height="80"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="119" height="80"/>
                                             </pickerView>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rr-E1-xUn">
-                                                <rect key="frame" x="147.5" y="0.0" width="118" height="80"/>
+                                                <rect key="frame" x="148" y="0.0" width="118" height="80"/>
                                             </pickerView>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EVj-5o-V6k">
-                                                <rect key="frame" x="294.5" y="0.0" width="118.5" height="80"/>
+                                                <rect key="frame" x="295" y="0.0" width="119" height="80"/>
                                             </pickerView>
                                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uhJ-TL-OkP">
                                                 <rect key="frame" x="442" y="0.0" width="118" height="80"/>
@@ -150,16 +161,16 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="uTu-LA-BEx" firstAttribute="centerX" secondItem="vtU-gu-eLU" secondAttribute="centerX" id="ZSP-cO-hnZ"/>
                                     <constraint firstAttribute="height" constant="80" id="cDi-Hf-YHD"/>
                                     <constraint firstItem="uTu-LA-BEx" firstAttribute="centerY" secondItem="vtU-gu-eLU" secondAttribute="centerY" constant="10" id="y2Y-QB-oov"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWs-uf-oK9">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWs-uf-oK9" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="0.0" y="587" width="375" height="80"/>
-                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="5Hb-FT-vAj"/>
                                 </constraints>
@@ -167,6 +178,35 @@
                                 <state key="normal" title="OK">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="velocity">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="repeatCount">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="spring"/>
+                                </userDefinedRuntimeAttributes>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rAC-9j-LG2">
                                 <rect key="frame" x="0.0" y="80" width="375" height="507"/>
@@ -231,7 +271,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="TWs-uf-oK9" firstAttribute="leading" secondItem="VxD-ag-qUs" secondAttribute="leading" id="2tl-jU-VpK"/>
                             <constraint firstItem="1x0-qj-TTd" firstAttribute="top" secondItem="TWs-uf-oK9" secondAttribute="bottom" id="5s6-pR-e5q"/>
@@ -273,7 +313,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="XRC-K7-Ijv" firstAttribute="centerY" secondItem="hMs-3k-EFD" secondAttribute="centerY" constant="10" id="PqV-DZ-igS"/>
                                     <constraint firstItem="XRC-K7-Ijv" firstAttribute="centerX" secondItem="hMs-3k-EFD" secondAttribute="centerX" id="Ygi-iU-cXP"/>
@@ -334,7 +374,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="YW6-0l-WeU" firstAttribute="centerX" secondItem="UN4-4d-yVP" secondAttribute="centerX" id="58B-2p-fbv"/>
                                     <constraint firstItem="lbO-lt-PCv" firstAttribute="leading" secondItem="nB6-Re-PGN" secondAttribute="trailing" constant="1" id="8ta-jJ-Tfb"/>
@@ -355,13 +395,39 @@
                                     <constraint firstAttribute="bottom" secondItem="5Re-GF-PFC" secondAttribute="bottom" constant="20" id="xTH-5p-DFg"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fM8-Z3-j4n">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fM8-Z3-j4n" customClass="SpringButton" customModule="Spring">
                                 <rect key="frame" x="137" y="517" width="100" height="100"/>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="8Mb-wW-haR"/>
                                     <constraint firstAttribute="height" constant="100" id="pwo-x1-Fb6"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="curve" value="spring"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="velocity">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -382,8 +448,196 @@
             </objects>
             <point key="canvasLocation" x="1750.5" y="316.5"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="xdE-Hn-fcV">
+            <objects>
+                <viewController id="Cae-NB-Nyz" customClass="ProfileViewController" customModule="Hackathon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jie-Za-Zkm"/>
+                        <viewControllerLayoutGuide type="bottom" id="u9K-W8-VTT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ef3-1N-Ttx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QPa-n2-AAF" userLabel="MapViewContainer">
+                                <rect key="frame" x="200" y="377" width="180" height="290"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MEXICO CITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXI-fb-aui">
+                                        <rect key="frame" x="9" y="261" width="158" height="21"/>
+                                        <fontDescription key="fontDescription" name="DIN1451fetteBreitschrift1936-Regular" family="DIN 1451 fette Breitschrift 1936" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.34186698717948716" green="0.34186698717948716" blue="0.34186698717948716" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Blue bubble" translatesAutoresizingMaskIntoConstraints="NO" id="S1J-sp-RNn">
+                                <rect key="frame" x="200" y="288" width="175" height="98"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Graph view" translatesAutoresizingMaskIntoConstraints="NO" id="Irv-Ev-hcF">
+                                <rect key="frame" x="-4" y="116" width="383" height="113"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-4" y="78" width="383" height="113"/>
+                                </variation>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UlE-sU-cOu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VENTON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnb-5g-nvo">
+                                        <rect key="frame" x="126" y="38" width="123" height="25"/>
+                                        <fontDescription key="fontDescription" name="DIN1451fetteBreitschrift1936-Regular" family="DIN 1451 fette Breitschrift 1936" pointSize="25"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="272" y="37.5" width="123" height="25"/>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZy-UW-wg1" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="20" y="123" width="100" height="100"/>
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="velocity">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JULIO CÉSAR GUZMÁN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1N-ZP-KFx">
+                                <rect key="frame" x="10" y="249" width="260" height="21"/>
+                                <fontDescription key="fontDescription" name="DIN1451fetteBreitschrift1936-Regular" family="DIN 1451 fette Breitschrift 1936" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Small verified icon view" translatesAutoresizingMaskIntoConstraints="NO" id="YcF-Qu-G74">
+                                <rect key="frame" x="263" y="250" width="19" height="19"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Don't drink and derive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxs-iu-4BV" customClass="SpringLabel" customModule="Spring">
+                                <rect key="frame" x="160" y="162" width="195" height="15"/>
+                                <fontDescription key="fontDescription" name="DIN1451fetteBreitschrift1936-Regular" family="DIN 1451 fette Breitschrift 1936" pointSize="14"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeIn"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="force">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="duration">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="damping">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="velocity">
+                                        <real key="value" value="0.69999999999999996"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleX">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scaleY">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="KM/HR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRP-Sl-hIc">
+                                <rect key="frame" x="301" y="323" width="54" height="21"/>
+                                <fontDescription key="fontDescription" name="DIN1451fetteBreitschrift1936-Regular" family="DIN 1451 fette Breitschrift 1936" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="AVERAGE VELOCITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRI-ZG-gbh">
+                                <rect key="frame" x="208" y="350" width="164" height="21"/>
+                                <fontDescription key="fontDescription" name="DIN1451fetteBreitschrift1936-Regular" family="DIN 1451 fette Breitschrift 1936" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="63" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bof-hZ-Eh5">
+                                <rect key="frame" x="-1" y="288" width="201" height="379"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="98" id="Vcn-Ef-dfI">
+                                        <rect key="frame" x="0.0" y="28" width="201" height="98"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Vcn-Ef-dfI" id="NRJ-11-FgB">
+                                            <rect key="frame" x="0.0" y="0.0" width="201" height="97.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="271" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SdQ-kb-yBQ">
+                                                    <rect key="frame" x="8" y="8" width="185" height="58"/>
+                                                    <fontDescription key="fontDescription" name="DINCondensedC" family="DINCondensedC" pointSize="48"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RIDES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BKc-J5-lGa">
+                                                    <rect key="frame" x="8" y="62" width="185" height="21"/>
+                                                    <fontDescription key="fontDescription" name="DIN1451fetteBreitschrift1936-Regular" family="DIN 1451 fette Breitschrift 1936" pointSize="12"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SdQ-kb-yBQ" firstAttribute="leading" secondItem="NRJ-11-FgB" secondAttribute="leadingMargin" id="Ame-uW-GP0"/>
+                                                <constraint firstItem="SdQ-kb-yBQ" firstAttribute="top" secondItem="NRJ-11-FgB" secondAttribute="topMargin" id="Hl6-Vt-IaM"/>
+                                                <constraint firstItem="BKc-J5-lGa" firstAttribute="top" secondItem="NRJ-11-FgB" secondAttribute="topMargin" constant="54" id="Md5-ZU-pdH"/>
+                                                <constraint firstItem="BKc-J5-lGa" firstAttribute="trailing" secondItem="SdQ-kb-yBQ" secondAttribute="trailing" id="UML-Nz-zoU"/>
+                                                <constraint firstItem="SdQ-kb-yBQ" firstAttribute="trailing" secondItem="NRJ-11-FgB" secondAttribute="trailingMargin" id="Xvi-PQ-wqa"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="SdQ-kb-yBQ" secondAttribute="bottom" constant="23.5" id="aKB-N0-HS3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BKc-J5-lGa" secondAttribute="bottom" constant="6.5" id="jsf-TD-BrM"/>
+                                                <constraint firstItem="SdQ-kb-yBQ" firstAttribute="leading" secondItem="BKc-J5-lGa" secondAttribute="leading" id="wgm-7z-lh3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="73" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpS-LX-nya">
+                                <rect key="frame" x="226" y="310" width="93" height="40.5"/>
+                                <fontDescription key="fontDescription" name="DINCondensedC" family="DINCondensedC" pointSize="48"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iwg-Tm-gpd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1165.5" y="1088.5"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Blue bubble" width="176" height="98"/>
+        <image name="Graph view" width="375" height="113"/>
+        <image name="Small verified icon view" width="19" height="19"/>
         <image name="downVote" width="16" height="16"/>
         <image name="hamburguerIcon" width="24" height="19"/>
         <image name="upVote" width="16" height="16"/>
