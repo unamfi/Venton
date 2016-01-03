@@ -46,18 +46,6 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLJ-Ym-ks6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnU-hp-Vnx">
-                                        <rect key="frame" x="8" y="594" width="359" height="54"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <state key="normal" title="Request a ride" backgroundImage="Blue bubble">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="4vJ-aa-5ni" kind="show" id="DYW-qU-hTu"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlz-uM-3CS">
@@ -130,11 +118,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="search"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnU-hp-Vnx">
+                                <rect key="frame" x="8" y="307" width="359" height="54"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="54" id="DXi-xQ-oio"/>
+                                    <constraint firstAttribute="height" constant="54" id="Hik-X0-OeT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Request a ride" backgroundImage="Blue bubble">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4vJ-aa-5ni" kind="show" id="DYW-qU-hTu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bz5-nl-p64" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="7i3-om-yNB"/>
                             <constraint firstItem="PLJ-Ym-ks6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8kq-rn-Mgj"/>
+                            <constraint firstItem="BnU-hp-Vnx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-12" id="ALG-xn-CXT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BnU-hp-Vnx" secondAttribute="bottom" constant="20" id="Cqu-2D-vfl"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Yq2-7F-NDc" secondAttribute="bottom" id="F9O-vs-I9j"/>
                             <constraint firstItem="Mlz-uM-3CS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MaQ-hq-uwU"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="PLJ-Ym-ks6" secondAttribute="bottom" id="W8i-dB-ZA9"/>
@@ -146,6 +150,7 @@
                             <constraint firstItem="Yq2-7F-NDc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="pZa-o2-hhC"/>
                             <constraint firstItem="bz5-nl-p64" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="qS8-Wl-VjH"/>
                             <constraint firstAttribute="trailing" secondItem="Yq2-7F-NDc" secondAttribute="trailing" id="uX4-fC-LEK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BnU-hp-Vnx" secondAttribute="trailing" constant="-12" id="vYK-4I-gtd"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -232,6 +237,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="curve" value="spring"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="Ik4-Lp-dcZ" kind="show" id="QMb-nB-kOD"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="95" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rAC-9j-LG2" customClass="HPReorderAndSwipeToDeleteTableView">
                                 <rect key="frame" x="0.0" y="80" width="375" height="507"/>
@@ -247,9 +255,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wRA-Xg-7mu" customClass="CircleButton" customModule="Hackathon" customModuleProvider="target">
                                                     <rect key="frame" x="10" y="8" width="80" height="80"/>
                                                     <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <connections>
-                                                        <segue destination="Ik4-Lp-dcZ" kind="show" id="c5y-eq-E8a"/>
-                                                    </connections>
+                                                    <state key="normal" backgroundImage="jonathan.png"/>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="17M-J3-nIe">
                                                     <rect key="frame" x="120" y="38" width="113" height="48.5"/>
@@ -415,6 +421,7 @@
                                     <constraint firstAttribute="width" constant="100" id="8Mb-wW-haR"/>
                                     <constraint firstAttribute="height" constant="100" id="pwo-x1-Fb6"/>
                                 </constraints>
+                                <state key="normal" backgroundImage="jonathan.png"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="YES"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="pop"/>
@@ -441,6 +448,9 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="back:" destination="Ik4-Lp-dcZ" eventType="touchUpInside" id="gqY-Gc-HrG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -538,6 +548,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="string" keyPath="animation" value="slideRight"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="back:" destination="Cae-NB-Nyz" eventType="touchUpInside" id="zwT-UU-cuj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JULIO CÉSAR GUZMÁN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1N-ZP-KFx">
                                 <rect key="frame" x="10" y="249" width="260" height="21"/>
@@ -662,6 +675,7 @@
         <image name="Small verified icon view" width="19" height="19"/>
         <image name="downVote" width="16" height="16"/>
         <image name="hamburguerIcon" width="24" height="19"/>
+        <image name="jonathan.png" width="500" height="500"/>
         <image name="julio" width="441" height="441"/>
         <image name="upVote" width="16" height="16"/>
     </resources>
