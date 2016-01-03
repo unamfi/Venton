@@ -26,10 +26,12 @@
 		43D4CB4F1C39544C000AC42A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D4CB4E1C39544C000AC42A /* ProfileViewController.swift */; };
 		43D4CB521C395B2A000AC42A /* PT DIN Condensed Cyrillic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 43D4CB511C395B2A000AC42A /* PT DIN Condensed Cyrillic.ttf */; };
 		43D4CB541C3968C8000AC42A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D4CB531C3968C8000AC42A /* CircleView.swift */; };
+		9FD16BB31C399AC700E1F4F9 /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD16BB21C399AC700E1F4F9 /* ProfileCell.swift */; };
 		9FE134A91C394E3000F3E39E /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE134A81C394E3000F3E39E /* SearchResultsViewController.swift */; };
 		9FE134AB1C394E3D00F3E39E /* CurrentTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FE134AA1C394E3D00F3E39E /* CurrentTripViewController.swift */; };
 		9FE134AC1C3952E500F3E39E /* DIN1451-36breit.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3C3381C3941AC002E2DF3 /* DIN1451-36breit.ttf */; };
 		9FE134AD1C3952E500F3E39E /* SF-UI-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 9FD3C3391C39463D002E2DF3 /* SF-UI-Text-Light.otf */; };
+		9FE134B01C3979C700F3E39E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9FE134AF1C3979C700F3E39E /* Settings.bundle */; };
 		AA09B5E324F635C574D0D112 /* Pods_Hackathon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1EB21D38C015B81BDDC7DD8 /* Pods_Hackathon.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,7 +82,6 @@
 		437C5E261C38404B00481C03 /* ASDPRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASDPRequestManager.m; sourceTree = "<group>"; };
 		437C5E271C38404B00481C03 /* ASDPResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASDPResult.h; sourceTree = "<group>"; };
 		437C5E281C38404B00481C03 /* ASDPResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASDPResult.m; sourceTree = "<group>"; };
-		437C5E321C38564700481C03 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		437C5E341C38783E00481C03 /* EricssonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EricssonTests.swift; sourceTree = "<group>"; };
 		437C5E361C388EF600481C03 /* Ericsson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ericsson.swift; sourceTree = "<group>"; };
 		43D4CB4E1C39544C000AC42A /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -88,10 +89,12 @@
 		43D4CB531C3968C8000AC42A /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		5802FF0C100A4ACB79BE410D /* Pods-Hackathon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.debug.xcconfig"; sourceTree = "<group>"; };
 		5CD9B413845E46D216CB9D6A /* Pods-Hackathon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hackathon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hackathon/Pods-Hackathon.release.xcconfig"; sourceTree = "<group>"; };
+		9FD16BB21C399AC700E1F4F9 /* ProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
 		9FD3C3381C3941AC002E2DF3 /* DIN1451-36breit.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DIN1451-36breit.ttf"; sourceTree = "<group>"; };
 		9FD3C3391C39463D002E2DF3 /* SF-UI-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-UI-Text-Light.otf"; sourceTree = "<group>"; };
 		9FE134A81C394E3000F3E39E /* SearchResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		9FE134AA1C394E3D00F3E39E /* CurrentTripViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentTripViewController.swift; sourceTree = "<group>"; };
+		9FE134AF1C3979C700F3E39E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
 		B1EB21D38C015B81BDDC7DD8 /* Pods_Hackathon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hackathon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -168,6 +171,7 @@
 				430B6DA11C393F9A000EB7FA /* Model.swift */,
 				437C5E191C38404B00481C03 /* Ericsson */,
 				4356E6AD1C3737C4005E6889 /* Main.storyboard */,
+				9FD16BB21C399AC700E1F4F9 /* ProfileCell.swift */,
 				43D4CB531C3968C8000AC42A /* CircleView.swift */,
 				43D4CB501C395467000AC42A /* View Controllers */,
 				4356E6B01C3737C4005E6889 /* Assets.xcassets */,
@@ -203,8 +207,8 @@
 		437C5E191C38404B00481C03 /* Ericsson */ = {
 			isa = PBXGroup;
 			children = (
+				9FE134AF1C3979C700F3E39E /* Settings.bundle */,
 				437C5E361C388EF600481C03 /* Ericsson.swift */,
-				437C5E321C38564700481C03 /* Settings.bundle */,
 				437C5E1A1C38404B00481C03 /* API */,
 				437C5E241C38404B00481C03 /* Network */,
 			);
@@ -362,6 +366,7 @@
 				4356E6B41C3737C4005E6889 /* LaunchScreen.storyboard in Resources */,
 				4356E6B11C3737C4005E6889 /* Assets.xcassets in Resources */,
 				4356E6AF1C3737C4005E6889 /* Main.storyboard in Resources */,
+				9FE134B01C3979C700F3E39E /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +448,7 @@
 				437C5E2A1C38404B00481C03 /* APIManager.m in Sources */,
 				430B6DA21C393F9A000EB7FA /* Model.swift in Sources */,
 				437C5E2B1C38404B00481C03 /* APISpec.m in Sources */,
+				9FD16BB31C399AC700E1F4F9 /* ProfileCell.swift in Sources */,
 				437C5E2C1C38404B00481C03 /* APISpecRaw.m in Sources */,
 				43D4CB4F1C39544C000AC42A /* ProfileViewController.swift in Sources */,
 				437C5E371C388EF600481C03 /* Ericsson.swift in Sources */,
