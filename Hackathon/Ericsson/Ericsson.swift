@@ -49,22 +49,27 @@ import Alamofire
 typealias BooleanClosure = (Bool) -> ()
 typealias SuccessClosure = BooleanClosure
 
-typealias AnyObjectByStringDicstionary = [String: AnyObject]
+typealias AnyObjectByStringDictionary = [String: AnyObject]
 
 typealias HandleRequestID = (Int) -> ()
 
+typealias InfoClosure = (AnyObjectByStringDictionary) -> ()
 
 class EricssonManager {
 
-    let logInParameters = ["username" : "provider", "pin": "1234", "vin" : "3115361391"]
-    var params = ["route" : ["vin" : "3115361391"]]
+    private let logInParameters = ["username" : "provider", "pin": "1234", "vin" : "3115361391"]
+    private var params = ["route" : ["vin" : "3115361391"]]
+    
+    private func saveRequestID(requestID : Int) {
+        self.params["route"]!["requestId"] = String(requestID)
+    }
     
     private var sharedASDPManager : ASDPRequestManager {
         return ASDPRequestManager.sharedManager()
     }
 
-    private func dictionaryWithData(data : NSData) -> AnyObjectByStringDicstionary {
-        return try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! AnyObjectByStringDicstionary
+    private func dictionaryWithData(data : NSData) -> AnyObjectByStringDictionary {
+        return try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers) as! AnyObjectByStringDictionary
     }
     
     func logIn(success: SuccessClosure) {
@@ -82,30 +87,41 @@ class EricssonManager {
         }
     }
     
-    func getVehicleRequestID(handler : HandleRequestID) {
+    private func getVehicleRequestID(handler : HandleRequestID) {
         getRequestID(handler, asdpMethod: sharedASDPManager.getVehicleStatus)
     }
     
-    func getBusRequestID(handler : HandleRequestID) {
+    private func getBusRequestID(handler : HandleRequestID) {
         getRequestID(handler, asdpMethod: sharedASDPManager.getBusInfo)
     }
     
-    func getDiagnosticDataRequestID(handler : HandleRequestID) {
+    private func getDiagnosticDataRequestID(handler : HandleRequestID) {
         getRequestID(handler, asdpMethod: sharedASDPManager.viewDiagnosticData)
     }
     
-    func checkRequestStatus() {
+    private func checkRequestStatus(info : InfoClosure) {
         sharedASDPManager.checkRequestStatus(params) { (result) -> Void in
-            print(result.data)
+            let dataDictionary = self.dictionaryWithData(result.bodyData)
+            info(dataDictionary)
         }
     }
     
-    func stuff(){
-        logIn { (_) -> () in
-            self.getVehicleRequestID({ (requestID) -> () in
-                self.params["route"]!["requestId"] = String(requestID)
-                self.checkRequestStatus()
-            })
-        }
+    private func getStatus(info: InfoClosure, getRequestID : (HandleRequestID) -> ()) {
+        getRequestID({ (requestID) -> () in
+            self.saveRequestID(requestID)
+            self.checkRequestStatus(info)
+        })
+    }
+    
+    func getVehicleStatus(info : InfoClosure) {
+        getStatus(info, getRequestID: self.getVehicleRequestID)
+    }
+    
+    func getBusStatus(info : InfoClosure) {
+        getStatus(info, getRequestID: self.getBusRequestID)
+    }
+    
+    func getDiagnosticDataStatus(info : InfoClosure) {
+        getStatus(info, getRequestID: self.getDiagnosticDataRequestID)
     }
 }
